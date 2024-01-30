@@ -5,30 +5,34 @@ import 'package:flutter_application_1/Views/LoginScreen.dart';
 import 'package:flutter_application_1/Views/SplashScreen.dart';
 import 'package:get/get.dart';
 
-Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  if(kIsWeb){
-    await Firebase.initializeApp(
-      options: const FirebaseOptions(
-        apiKey: "AIzaSyDjpe7lWgZDwXem-RqTJr_xZbmJ8oyf2AI", 
-        appId: "1:129776743637:web:8df47e4c2b29f3c5e91e5c", 
-                authDomain: "todo-list-app-cb9f7.firebaseapp.com",
 
-        messagingSenderId: 
-        "129776743637", 
-        projectId:"todo-list-app-cb9f7")
-    );
-  }else {
-    try {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+ /* try {
+    if (kIsWeb) {
+      await Firebase.initializeApp(
+        options: const FirebaseOptions(
+          apiKey: "AIzaSyDjpe7lWgZDwXem-RqTJr_xZbmJ8oyf2AI",
+          appId: "1:129776743637:web:8df47e4c2b29f3c5e91e5c",
+          authDomain: "todo-list-app-cb9f7.firebaseapp.com",
+          messagingSenderId: "129776743637",
+          projectId: "todo-list-app-cb9f7",
+        ),
+      );
+    } else {
+      await Firebase.initializeApp(
+
+      );
+    }
+  } catch (e) {
+    print("Firebase initialization failed: $e");
+  }*/
   await Firebase.initializeApp();
-} catch (e) {
-  print("Firebase initialization failed: $e");
-}
-  }
-    //await Firebase.initializeApp(); // Initialize Firebase
 
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

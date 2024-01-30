@@ -1,22 +1,15 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'dart:async';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Utils/authorization.dart';
-import 'package:flutter_application_1/Views/HomePage.dart';
 import 'package:flutter_application_1/Views/HomeScreen.dart';
 import 'package:flutter_application_1/Views/SignupScreen.dart';
 import 'package:flutter_application_1/common_widgets/button.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../common_widgets/text_widget.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -54,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Center(
                 child: Container(
                   height: screenHeight * 0.75,
-                  width: screenWidth * 0.7,
+                  width: screenWidth * 0.72,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
